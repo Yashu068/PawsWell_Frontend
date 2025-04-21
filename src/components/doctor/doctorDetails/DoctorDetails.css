@@ -1,0 +1,143 @@
+/* Base container styling */
+.doctordetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 800px;
+  background: linear-gradient(135deg, #e0f7ff, #c6e2ff); /* Gradient for modern look */
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Profile image section */
+.doctorimage {
+  margin-bottom: 25px;
+}
+
+.doctorprofileimage {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4a90e2;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.doctorprofileimage:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Data container styling */
+.doctordata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.doctordataleft,
+.doctordataright {
+  flex: 1;
+  min-width: 260px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadePop 0.8s ease forwards;
+}
+
+.doctordataleft:hover,
+.doctordataright:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styles */
+.doctorlabel {
+  margin: 10px 0 4px;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  opacity: 0.9;
+  transition: color 0.3s ease;
+}
+
+.doctorlabelp {
+  margin-top: 4px;
+  font-weight: normal;
+  color: #555;
+  font-size: 15px;
+}
+
+/* Update button */
+.doctorprofileupdate {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #4a90e2, #6bb9f0);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.doctorprofileupdate:hover {
+  background: linear-gradient(135deg, #357ab8, #4a90e2);
+  transform: scale(1.05);
+}
+
+.doctorprofileupdatelink {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctordata {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .doctordataleft,
+  .doctordataright {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .doctorprofileimage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .doctorprofileupdate {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadePop {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}

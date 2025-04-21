@@ -1,0 +1,70 @@
+.navbar3 {
+  height: 60px;
+  background-color: #3498db; /* A more vibrant shade of blue */
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar31 {
+  display: flex;
+  align-items: center;
+}
+
+.navbar311,
+.navbar312 {
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar311 a,
+.navbar312 a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar311 a:hover,
+.navbar312 a:hover {
+  background-color: #00bcd4; /* Aqua blue background on hover */
+  color: white;
+}
+
+.navbar311 a.active,
+.navbar312 a.active {
+  background-color: #2980b9; /* Darker blue for active links */
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar3 {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar31 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar311,
+  .navbar312 {
+    margin: 10px 0;
+  }
+
+  .navbar311 a,
+  .navbar312 a {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,200 @@
+.editpatientdetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto 120px;
+  padding: 30px;
+  max-width: 850px;
+  background: linear-gradient(135deg, #d9f1ff, #a3d8f4);
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeInForm 1s ease forwards;
+}
+
+/* Profile image */
+.editpatientimage {
+  margin-bottom: 20px;
+}
+
+.editpatientprofileimage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3498db;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.editpatientprofileimage:hover {
+  transform: scale(1.05);
+}
+
+/* Top input like name/photo change */
+.patientlabelinputprofile {
+  margin-bottom: 25px;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patientlabelinputprofile:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+/* Form layout */
+.editpatientdata {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.editpatientdataleft,
+.editpatientdataright {
+  flex: 1;
+  min-width: 260px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.editpatientdataleft:hover,
+.editpatientdataright:hover {
+  transform: translateY(-3px);
+}
+
+/* Labels & inputs */
+.editpatientlabel {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.patientlabelinput {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patientlabelinput:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+/* Update button */
+.editpatientprofileupdate {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #3498db, #5dade2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.editpatientprofileupdate:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: scale(1.05);
+}
+
+/* Tablet and mobile responsive styling */
+@media (max-width: 992px) {
+  .editpatientprofileupdate {
+    width: 60%;
+  }
+
+  .editpatientprofileimage {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .editpatientdata {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .editpatientdataleft,
+  .editpatientdataright {
+    width: 100%;
+  }
+
+  .editpatientprofileimage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .editpatientprofileupdate {
+    width: 100%;
+  }
+
+  .patientlabelinputprofile {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .editpatientdetails {
+    padding: 20px;
+  }
+
+  .editpatientprofileimage {
+    width: 100px;
+    height: 100px;
+  }
+
+  .patientlabelinput {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .editpatientlabel {
+    font-size: 14px;
+  }
+
+  .editpatientprofileupdate {
+    font-size: 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInForm {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

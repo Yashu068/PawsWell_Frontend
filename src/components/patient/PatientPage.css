@@ -1,0 +1,80 @@
+/* .patient {
+    background-color: blue;
+    display: flex;
+}
+.patientrightcontent {
+    height: 100%;
+    width: 60%;
+    border: 2px solid red;
+    border-radius: 8px;
+    background-color: red;
+} */
+
+
+
+.patient {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .patient-navbar {
+    height: 60px;
+    background-color: #ff7e67;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .patient-sidebar {
+    width: 240px;
+    background-color: #f4f4f9;
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+  
+  .patient-sidebar:hover {
+    background-color: #fbeee6;
+  }
+  
+  .patient-right-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    overflow-y: auto;
+    border-radius: 10px 0 0 10px;
+    animation: fadeInUp 0.8s ease;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  

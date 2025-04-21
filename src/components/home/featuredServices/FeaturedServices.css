@@ -1,0 +1,106 @@
+.featuredservices {
+    height: 400px;
+    margin: 40px 60px 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+}
+
+.featuredupper {
+    height: 28%;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.featuredupper h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.featuredupper p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.featuredlower {
+    display: flex;
+    height: 70%;
+    gap: 20px;
+}
+
+.lowerc1,
+.lowerc2,
+.lowerc3,
+.lowerc4 {
+    width: 25%;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.lowerc1:hover,
+.lowerc2:hover,
+.lowerc3:hover,
+.lowerc4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
+}
+
+.lowerc1image {
+    width: 40%;
+    height: auto;
+    margin: 10px auto 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.lowerc1:hover .lowerc1image,
+.lowerc2:hover .lowerc1image,
+.lowerc3:hover .lowerc1image,
+.lowerc4:hover .lowerc1image {
+    transform: scale(1.1);
+}
+
+.lowerc1h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #34495e;
+}
+
+.lowerc1p {
+    margin: 0 20px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    .featuredservices {
+        height: auto;
+        margin: 40px 20px;
+    }
+
+    .featuredlower {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .lowerc1,
+    .lowerc2,
+    .lowerc3,
+    .lowerc4 {
+        width: 100%;
+    }
+
+    .lowerc1image {
+        width: 30%;
+    }
+}

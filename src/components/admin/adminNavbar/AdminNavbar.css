@@ -1,0 +1,88 @@
+.adminnavbar {
+  height: 70px;
+  background: linear-gradient(135deg, #499bf3, #397ee9); /* Gradient like doctor navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  position: relative;
+}
+
+.adminnavbar31 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Link sections */
+.adminnavbar311 a,
+.adminnavbar312 a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.adminnavbar311 a::after,
+.adminnavbar312 a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00bcd4;
+  transition: width 0.3s ease;
+}
+
+.adminnavbar311 a:hover::after,
+.adminnavbar312 a:hover::after {
+  width: 100%;
+}
+
+.adminnavbar311 a:hover,
+.adminnavbar312 a:hover {
+  color: #00bcd4;
+}
+
+/* Logout button */
+.adminlogout {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.adminlogout:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .adminnavbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .adminnavbar31 {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .adminlogout {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

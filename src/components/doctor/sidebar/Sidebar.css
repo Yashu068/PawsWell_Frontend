@@ -1,0 +1,78 @@
+.doctorsidebar {
+    width: 20%;
+    position: fixed;
+    top: 70px; /* height of navbar */
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, #85c8ef, #60a9e6); /* Gradient background like patient sidebar */
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 20px;
+    z-index: 999;
+    animation: slideInLeft 0.6s ease; /* Slide-in animation */
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .doctoricon {
+    margin: 10px 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+  }
+  
+  .doctoricon:hover {
+    background-color: #499bf3; /* Change background on hover */
+    transform: scale(1.02); /* Slight scale effect */
+  }
+  
+  .doctoricon a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 12px 20px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .doctoricon a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease; /* Bottom border transition */
+  }
+  
+  .doctoricon a:hover::before {
+    width: 70%; /* Expand the bottom border on hover */
+  }
+  
+  .doctoricon a:hover {
+    color: #e8f9ff; /* Change color on hover */
+    letter-spacing: 0.5px; /* Slight letter spacing for hover effect */
+  }
+  
+  .doctoricon a.active {
+    background-color: #407fd4; /* Active background color */
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Active state shadow */
+    transform: scale(1.03); /* Slight scale effect for active state */
+  }
+  

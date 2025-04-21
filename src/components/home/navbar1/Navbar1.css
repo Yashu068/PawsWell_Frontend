@@ -1,0 +1,63 @@
+.navbar1 {
+    height: 50px; /* Adjusted height */
+    background-color: #f0f4f8; /* Light gray background for a modern look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px; /* More padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    border-bottom: 2px solid #e0e0e0; /* Light bottom border for separation */
+    font-family: 'Arial', sans-serif; /* Clean font for a modern look */
+}
+
+.n11, .n12 {
+    display: flex;
+    align-items: center;
+}
+
+.hnav1, .hnav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hnav1 {
+    margin-right: 15px; /* Adjusted margin between icons */
+}
+
+.hnav2 {
+    margin-left: 15px; /* Adjusted margin */
+}
+
+.himg {
+    height: 22px; /* Standardized icon size */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animations for icon changes */
+    opacity: 0.8; /* Slight opacity for icons */
+}
+
+.hnav1:hover .himg, .hnav2:hover .himg {
+    transform: scale(1.1); /* Slight scaling on hover */
+    opacity: 1; /* Full opacity on hover */
+}
+
+.n12 .himg {
+    height: 28px; /* Slightly larger icon for login */
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar1 {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .n11, .n12 {
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .himg {
+        height: 25px; /* Adjusted for mobile */
+    }
+}

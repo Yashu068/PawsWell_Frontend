@@ -1,0 +1,129 @@
+.news {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #e3f5ff, #c1e3f7);
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeInForm 1s ease forwards;
+  }
+  
+  .news h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  .news label {
+    display: block;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+  .news input,
+  .news textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #fefefe;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .news input:focus,
+  .news textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+  }
+  
+  .news textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .wrap {
+    text-align: center;
+  }
+  
+  .news button {
+    background: linear-gradient(135deg, #3498db, #5dade2);
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .news button:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .news {
+      margin: 30px 20px;
+      padding: 20px;
+    }
+  
+    .news h3 {
+      font-size: 24px;
+    }
+  
+    .news input,
+    .news textarea {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .news button {
+      padding: 12px 25px;
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .news {
+      margin: 20px 10px;
+      padding: 15px;
+    }
+  
+    .news h3 {
+      font-size: 20px;
+    }
+  
+    .news input,
+    .news textarea {
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .news button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeInForm {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

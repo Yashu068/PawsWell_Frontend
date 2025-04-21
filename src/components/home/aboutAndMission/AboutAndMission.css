@@ -1,0 +1,160 @@
+.aboutandmission {
+    height: 400px;
+    display: flex;
+    margin: 10px 60px;
+    background: linear-gradient(135deg, #f9f9f9, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInScale 1.2s ease-in-out;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.leftabout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 68%;
+    padding: 0 20px;
+    color: #333;
+}
+
+.leftaboutupper,
+.leftaboutlower {
+    padding-right: 10px;
+    animation: slideInFromLeft 1.5s ease-in-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.aboutus h3,
+.visionandmission h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.aboutus h3:hover,
+.visionandmission h3:hover {
+    color: #ff6b6b;
+}
+
+.aboutus h5,
+.visionandmission h5 {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.vision {
+    text-align: center;
+}
+
+.aboutus p,
+.visionandmission p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.aboutusstyle {
+    margin: 8px 0;
+}
+
+.visionandmission {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    text-align: left;
+}
+
+.rightabout {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scaleInFromBottom 1.2s ease-in-out forwards;
+}
+
+@keyframes scaleInFromBottom {
+    0% {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+.rightaboutimage {
+    width: 105%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    border: 3px solid #fff;
+    background-color: #eee;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.rightaboutimage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 768px) {
+    .aboutandmission {
+        flex-direction: column;
+        height: auto;
+        margin: 10px 20px;
+    }
+
+    .leftabout,
+    .rightabout {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .rightaboutimage {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+}
+
+.aboutus h5,
+.visionandmission h5 {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    height: 100%; /* Ensure the element has full height to center vertically */
+}
