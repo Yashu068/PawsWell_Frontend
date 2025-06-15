@@ -9,7 +9,7 @@ const AdminNotifications = () => {
     const getRequests = async () => {
         try {
             const token = localStorage.getItem('authToken');
-            const response = await axios.get(`http://localhost:3001/getApprovalRequestList`, {
+            const response = await axios.get(`https://pawswell-backend.onrender.com/getApprovalRequestList`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                   }

@@ -12,7 +12,7 @@ const Prescription = () => {
     const fetchData = async () => {
         const token = localStorage.getItem('authToken');
         try {
-            const response = await axios.get(`http://localhost:3001/getAllBookings`, {
+            const response = await axios.get(`https://pawswell-backend.onrender.com/getAllBookings`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

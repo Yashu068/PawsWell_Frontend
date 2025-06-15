@@ -13,7 +13,7 @@ const DynamicGraph = () => {
     const doctorAndPatientCount = async () => {
         const token = localStorage.getItem('authToken');
         try {
-            const response = await axios.get(`http://localhost:3001/getTotalPatientByDoctor`, { headers: {
+            const response = await axios.get(`https://pawswell-backend.onrender.com/getTotalPatientByDoctor`, { headers: {
                 Authorization: `Bearer ${token}`
               }
                });
@@ -41,7 +41,7 @@ const DynamicGraph = () => {
     const dateAndPatientCount = async () => {
         const token = localStorage.getItem('authToken');
         try {
-            const response = await axios.get(`http://localhost:3001/getTotalPAtientByDate`, { headers: {
+            const response = await axios.get(`https://pawswell-backend.onrender.com/getTotalPAtientByDate`, { headers: {
                 Authorization: `Bearer ${token}`
               }
                });

@@ -9,7 +9,7 @@ const PatientDetails = () => {
     const getUserData = async (e) => {
         try {
             const token = localStorage.getItem('authToken');
-            const details = await axios.get(`http://localhost:3001/getuserdetails`, { headers: {
+            const details = await axios.get(`https://pawswell-backend.onrender.com/getuserdetails`, { headers: {
                 Authorization: `Bearer ${token}`
               }
                });
@@ -25,7 +25,7 @@ const PatientDetails = () => {
     }, [])
     return (
         <div className='patientdetails'>
-            <div className='patientimage'><img className='patientprofileimage' src={`http://localhost:3001/` + patientDetails.profile_image} alt='patient'></img></div>
+            <div className='patientimage'><img className='patientprofileimage' src={`https://pawswell-backend.onrender.com/` + patientDetails.profile_image} alt='patient'></img></div>
             <div className='patientdata'>
                 <div className='patientdataleft'>
                     <div className='patientlabel'><p className='patientlabelp'><strong>Pet Name: </strong>{patientDetails.name}</p> </div>

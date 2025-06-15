@@ -15,7 +15,7 @@ const BookNow = ({ date, id, email }) => {
 
     const getDoctorsDetails = async () => {
         try {
-            const dataset = await axios.get(`http://localhost:3001/getdoctoravailability`, { params: { id: id } });
+            const dataset = await axios.get(`https://pawswell-backend.onrender.com/getdoctoravailability`, { params: { id: id } });
             setAvailability(dataset.data);
         } catch (error) {
             alert("Error fetching doctor details");
@@ -24,7 +24,7 @@ const BookNow = ({ date, id, email }) => {
 
     const getAlreadyBookedData = async () => {
         try {
-            const dataset = await axios.get(`http://localhost:3001/getalreadybookedslots`, { params: { id: id } });
+            const dataset = await axios.get(`https://pawswell-backend.onrender.com/getalreadybookedslots`, { params: { id: id } });
             console.log(dataset);
             setAlreadyBookedSlots(dataset.data.data);
         } catch (error) {
@@ -83,7 +83,7 @@ const BookNow = ({ date, id, email }) => {
 
         try {
             const token = localStorage.getItem('authToken');
-            await axios.post(`http://localhost:3001/submitbookings`, updatedBookingData, {headers: {
+            await axios.post(`https://pawswell-backend.onrender.com/submitbookings`, updatedBookingData, {headers: {
                 Authorization: `Bearer ${token}`
               }
                });

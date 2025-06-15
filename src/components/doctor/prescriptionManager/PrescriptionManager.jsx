@@ -18,7 +18,7 @@ const PrescriptionManager = () => {
   const submitPrescriptions = async () => {
     const token = localStorage.getItem('authToken');
     try {
-      await axios.post("http://localhost:3001/addDetailsToPatient", { bookingId:id, prescription:prescriptions }, {headers: {
+      await axios.post("https://pawswell-backend.onrender.com/addDetailsToPatient", { bookingId:id, prescription:prescriptions }, {headers: {
         Authorization: `Bearer ${token}`
       }
        });

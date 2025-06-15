@@ -29,7 +29,7 @@ const Register = () => {
     }, [countdown]);
 
     const requestOtp = async (e) => {
-        axios.post("http://localhost:3001/sendotp", { email: registrationData.email })
+        axios.post("https://pawswell-backend.onrender.com/sendotp", { email: registrationData.email })
             .then((response) => {
                 setOtpFlag(true);
                 setCountdown(60); 
@@ -47,7 +47,7 @@ const Register = () => {
     };
 
     const submitData = async (e) => {
-        axios.post("http://localhost:3001/register", registrationData)
+        axios.post("https://pawswell-backend.onrender.com/register", registrationData)
             .then((response) => {
                 navigate('/login');
             })
@@ -78,8 +78,8 @@ const Register = () => {
                         <label className='registerlabel'>Role:</label>
                         <select className='registerselect' name="role" value={registrationData.role} onChange={onChange} id="role" required>
                             <option value="" >Select your role</option>
-                            <option value="doctor">doctor</option>
-                            <option value="patient">patient</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="patient">Patient</option>
 {/*                             <option value="admin">admin</option> */}
                         </select>
                         <div className="registerwrap">

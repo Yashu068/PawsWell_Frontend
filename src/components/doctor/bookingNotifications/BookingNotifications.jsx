@@ -9,7 +9,7 @@ const BookingNotifications = () => {
     const getRequests = async () => {
         try {
             const token = localStorage.getItem('authToken');
-            const response = await axios.get(`http://localhost:3001/getCurrentBookings`, {
+            const response = await axios.get(`https://pawswell-backend.onrender.com/getCurrentBookings`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                   }

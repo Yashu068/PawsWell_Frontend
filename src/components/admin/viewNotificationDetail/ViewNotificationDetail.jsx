@@ -10,7 +10,7 @@ const ViewNotificationDetail = () => {
     const getUserData = async (e) => {
         try {
             const token = localStorage.getItem('authToken');
-            const details = await axios.get(`http://localhost:3001/getdoctordetails`, {params: {id: id}, headers: {
+            const details = await axios.get(`https://pawswell-backend.onrender.com/getdoctordetails`, {params: {id: id}, headers: {
                 Authorization: `Bearer ${token}`
               }
               });
@@ -29,7 +29,7 @@ const ViewNotificationDetail = () => {
         notificationDetails.id = id;
         try {
             const token = localStorage.getItem('authToken');
-            const response = await axios.patch(`http://localhost:3001/approveDoctor`, notificationDetails, { headers: {
+            const response = await axios.patch(`https://pawswell-backend.onrender.com/approveDoctor`, notificationDetails, { headers: {
                 Authorization: `Bearer ${token}`
               }
               });
@@ -45,7 +45,7 @@ const ViewNotificationDetail = () => {
         notificationDetails.id = id;
         try {
             const token = localStorage.getItem('authToken');
-            const response = await axios.patch(`http://localhost:3001/approveDoctor`, notificationDetails, { headers: {
+            const response = await axios.patch(`https://pawswell-backend.onrender.com/approveDoctor`, notificationDetails, { headers: {
                 Authorization: `Bearer ${token}`
               }
               });
@@ -58,7 +58,7 @@ const ViewNotificationDetail = () => {
 
     return (
         <div className='notificationdetails'>
-            <div className='notificationimage'><img className='notificationprofileimage' src={`http://localhost:3001/` + notificationDetails.profile_image} alt='notification'></img></div>
+            <div className='notificationimage'><img className='notificationprofileimage' src={`https://pawswell-backend.onrender.com/` + notificationDetails.profile_image} alt='notification'></img></div>
             <div className='notificationdata'>
                 <div className='notificationdataleft'>
                     <div className='notificationlabel'><p className='notificationlabelp'><strong>Name: </strong>{notificationDetails.name}</p> </div>

@@ -10,7 +10,7 @@ const Inventory = () => {
   const getInventoryData = async () => {
     try {
       const token = localStorage.getItem("authToken");
-      const response = await axios.get(`http://localhost:3001/getinventorydata`, {
+      const response = await axios.get(`https://pawswell-backend.onrender.com/getinventorydata`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -44,7 +44,7 @@ const Inventory = () => {
     setInventory(updatedInventory);
 
     const token = localStorage.getItem('authToken');
-    await axios.patch(`http://localhost:3001/updateinventory`, updatedInventory[index], {
+    await axios.patch(`https://pawswell-backend.onrender.comupdateinventory`, updatedInventory[index], {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -71,7 +71,7 @@ const Inventory = () => {
     setInventory(updatedInventory);
 
     const token = localStorage.getItem('authToken');
-    await axios.patch(`http://localhost:3001/updateinventory`, updatedInventory[index], {
+    await axios.patch(`https://pawswell-backend.onrender.comupdateinventory`, updatedInventory[index], {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -98,7 +98,7 @@ const Inventory = () => {
       setInventory(jsonData);
 
       const token = localStorage.getItem('authToken');
-      await axios.post(`http://localhost:3001/bulkinventory`, {data:jsonData}, {
+      await axios.post(`https://pawswell-backend.onrender.com/bulkinventory`, {data:jsonData}, {
         headers: {
           Authorization: `Bearer ${token}`
         }

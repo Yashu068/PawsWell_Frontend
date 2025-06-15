@@ -9,7 +9,7 @@ const AdminDetails = () => {
     const getUserData = async (e) => {
         try {
             const token = localStorage.getItem('authToken');
-            const details = await axios.get(`http://localhost:3001/getuserdetails`,{headers: {
+            const details = await axios.get(`https://pawswell-backend.onrender.com/getuserdetails`,{headers: {
                 Authorization: `Bearer ${token}`
               }
               });
@@ -26,7 +26,7 @@ const AdminDetails = () => {
     }, [])
     return (
         <div className='admindetails'>
-            <div className='adminimage'><img className='adminprofileimage' src={`http://localhost:3001/` + adminDetails.profile_image} alt='admin'></img></div>
+            <div className='adminimage'><img className='adminprofileimage' src={`https://pawswell-backend.onrender.com/` + adminDetails.profile_image} alt='admin'></img></div>
             <div className='admindata'>
                 <div className='admindataleft'>
                     <div className='adminlabel'><p className='adminlabelp'><strong>Name: </strong>{adminDetails.name}</p> </div>
